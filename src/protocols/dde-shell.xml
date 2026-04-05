@@ -53,6 +53,9 @@
         <entry name="skipswitcher" value="1 &lt;&lt; 18"/>
         <entry name="accept_focus" value="1 &lt;&lt; 19"/>
         <entry name="modality" value="1 &lt;&lt; 20"/>
+        <entry name="no_split" value="1 &lt;&lt; 21"/>
+        <entry name="two_split" value="1 &lt;&lt; 22"/>
+        <entry name="four_split" value="1 &lt;&lt; 23"/>
       </enum>
 
       <enum name="property">
@@ -66,6 +69,7 @@
         <entry name="ShadowColor" value="1 &lt;&lt; 7"/>
         <entry name="MouseInputAreaMargins" value="1 &lt;&lt; 8"/>
         <entry name="WindowPixelRatio" value="1 &lt;&lt; 9"/>
+        <entry name="QuickTile" value="1 &lt;&lt; 10"/>
       </enum>
 
       <enum name="split_type">

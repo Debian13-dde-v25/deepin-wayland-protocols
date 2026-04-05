@@ -38,12 +38,45 @@
         </description>
     </request>
 
+    <request name="capture_window_image">
+        <description summary="request capture a window image">
+            Request a captured image buffer for the specified window.
+        </description>
+        <arg name="window_id" type="int" summary="window id"/>
+        <arg name="buffer" type="object" interface="wl_buffer" summary="target shm buffer"/>
+    </request>
+
+    <request name="split_window">
+        <description summary="request split a window">
+            Request split operation for the specified window.
+        </description>
+        <arg name="uuid" type="string" summary="window uuid"/>
+        <arg name="split_type" type="int" summary="split type"/>
+    </request>
+
     <event name="window_states" since="1">
         <description summary="get special window information for all clients">
         windows information such as pid/window_id/property
         </description>
         <arg name="count" type="uint"/>
         <arg name="states" type="array" summary="windows information"/>
+    </event>
+
+    <event name="capture_callback">
+        <description summary="window capture callback">
+            Notify window capture completion.
+        </description>
+        <arg name="window_id" type="int" summary="window id"/>
+        <arg name="succeed" type="int" summary="whether capture succeeds"/>
+        <arg name="buffer" type="object" interface="wl_buffer" summary="captured shm buffer"/>
+    </event>
+
+    <event name="split_change">
+        <description summary="split state changed">
+            Notify split capability changes for a window.
+        </description>
+        <arg name="uuid" type="string" summary="window uuid"/>
+        <arg name="splitable" type="uint" summary="split state"/>
     </event>
 
     <request name="get_window_from_point">
