@@ -11,6 +11,7 @@ install(FILES
     protocols/dde-restrict.xml
     protocols/dde-seat.xml
     protocols/dde-security.xml
+    protocols/dde-globalproperty.xml
     protocols/dde-shell.xml
     protocols/fake-input.xml
     protocols/fullscreen-shell.xml
